@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .a{
+        background-color: red;
+    }
+    </style>
+</head>
+<body>
+    <h1>hello worldsgsd d</h1>
+    <img src="img/11.jpg" alt="">
+    <ul class="list">
+        <li>苹果</li>
+        <li>香蕉</li>
+        <li>鸭梨</li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script>
+        $("h1").css("color","red");
+        //$("h1")找到的元素的样式是color，设置成红色
+        var txt = $("h1").text();
+        //获取元素文本
+        console.log(txt);
+        $("img").attr("src","12.jpg")
+        //attr方法可以设置两个参数，，第一个是要设置的属性名，第二个是属性值
+        // $(".list li:eq(1)").css("color","red")
+        //$(".list li:eq(1)")可以找到list里所有的li，左右li的两个元素，括号里是索引值
+        $(".list li:eq(1)").addClass("a")
+        $(".list li:eq(1)").removeClass("a")
+        //addClass可以给元素添加一个class名a，
+        //removeClass方法可以删除元素的class名
+    </script>
+</body>
+</html>

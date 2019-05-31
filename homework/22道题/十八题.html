@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="app">
+        <img v-bind:src="url" alt="">
+        <ul class="list">
+            <li v-for="vlaue,index in list" @click="changeImg(vlaue.imgUrl)">
+                {{vlaue.label}}
+            </li>
+        </ul>
+    </div> -->
+    <script src="../3-25/vue.js"></script>
+    <!-- <script>
+        new Vue({
+            el:"#app",
+            data:{
+                url:"sucai/11.jpg",
+                list:[
+                    {
+                        label:"1",
+                        imgUrl:"sucai/12.jpg"
+                    },
+                    {
+                        label:"2",
+                        imgUrl:"sucai/13.jpg"
+                    },
+                    {
+                        label:"3",
+                        imgUrl:"sucai/14.jpg"
+                    },
+                    {
+                        label:"4",
+                        imgUrl:"sucai/15.jpg"
+                    },
+                ]
+            },
+            methods:{
+                changeImg(url){
+                    this.url =url
+                }
+            }
+        })
+    </script> -->
+
+
+    <div id="app">
+        <img v-bind:src="url" alt="">
+        <ul>
+            <li v-for="val,index in list" @click="changeImg(val.imgUrl)">
+                {{val.label}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                url:"sucai/11.jpg",
+                list:[
+                    {
+                        label:"1",
+                        imgUrl:"sucai/12.jpg",
+                    },
+                    {
+                        label:"2",
+                        imgUrl:"sucai/13.jpg",
+                    },
+                    {
+                        label:"3",
+                        imgUrl:"sucai/14.jpg",
+                    },
+                    {
+                        label:"4",
+                        imgUrl:"sucai/15.jpg",
+                    },
+                ]
+            },
+            methods:{
+                changeImg(url){
+                    this.url = url;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

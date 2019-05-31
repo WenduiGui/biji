@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <img src="sucai/11.jpg" alt="">
+    <button class="pic1">1</button>
+    <button class="pic2">2</button>
+    <button class="pic3">3</button>
+    <button class="pic4">4</button> -->
+    <script>
+    
+    // var res = 0;
+    // function count(m){
+    //     for(var i=0;i<=m;i++){
+    //         res+=i;
+    //     }
+    //     return res;
+    // }
+    // var result = count(5);
+    // console.log(result);
+
+
+        // function count(m,s,n){
+        //     switch(s){
+        //         case "+": return m+n;break;
+        //         case "-": return m-n;break;
+        //         case "*": return m*n;break;
+        //         case "/": return m/n;break;
+        //         default: alert("错误");
+        //     }
+        // }
+        // var result = count(5,"+",6);
+        // console.log(result);
+        // var result = count(5,"*",6);
+        // console.log(result);
+
+
+    // var res=0;
+    // function count(m){
+    //     for(var i=0;i<=m;i++){
+    //         if(i%2==1){
+    //             res+=i;
+    //         }
+    //     }
+    //     return res;
+    // }
+    // var result = count(10);
+    // console.log(result);
+
+
+
+        // var img = document.querySelector("img");
+        // var btn = document.querySelector("button.pic1");
+        // var btn1 = document.querySelector("button.pic2");
+        // var btn2 = document.querySelector("button.pic3");
+        // var btn3 = document.querySelector("button.pic4");
+        // btn.onclick = function(){
+        //     img.src = "sucai/12.jpg";
+        // }
+        // btn1.onclick = function(){
+        //     img.src = "sucai/13.jpg";
+        // }
+        // btn2.onclick = function(){
+        //     img.src = "sucai/14.jpg";
+        // }
+        // btn3.onclick = function(){
+        //     img.src = "sucai/15.jpg";
+        // }
+
+        
+
+    </script>
+
+
+    <input type="text"><button>添加</button>
+    <ul>
+        <li><span>香蕉</span><span class="del">删除</span></li>
+        <li><span>苹果</span><span class="del">删除</span></li>
+        <li><span>鸭梨</span><span class="del">删除</span></li>
+        <li><span>芒果</span><span class="del">删除</span></li>
+        <li><span>草莓</span><span class="del">删除</span></li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script>
+        $("button").click(function(){
+            var $li = $("<li>");
+            var text = $("input").val();
+            $li.text(text);
+            var $del = $("<span class='del'>删除</span>")
+            $li.append($del);
+            $("ul").append($li);           
+        });
+        $("ul").delegate(".del","click",function(){
+            $(this).parent().remove();
+        })
+    </script>
+</body>
+</html>

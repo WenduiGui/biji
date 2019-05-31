@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 第一题 -->
+    <!-- <script>
+    var arr = [5,10,6,11,18,22,31,52,19];
+    var arr1 = [];
+    for(var i = 0;i<=arr.length;i++){
+        if(arr[i]%2==0){
+            arr1.push(arr[i]);
+        }
+    }
+    console.log(arr1);
+    
+    </script> -->
+
+
+        <!-- 第二题 -->
+    <!-- <h1></h1>
+    <script>
+       var h1 = document.querySelector("h1");
+       function getTime(){
+            var dateNow = new Date();
+            var hours = dateNow.getHours();
+            var minutes = dateNow.getMinutes();
+            var strconds = dateNow.getSeconds();
+            var strTimsNow = hours + ":" + minutes + ":" + strconds;
+            h1.innerHTML = strTimsNow;
+
+        };
+        getTime();
+        setInterval(getTime,1000);
+    </script> -->
+
+
+    <!-- 第三题没写完 -->
+        <h1></h1>
+        <script>
+            var h1 = document.querySelector("h1");
+            var target = new Date("2019-6-6");
+            var targetTime = target.getTime();
+            var ms;
+            function getTimeNow(){
+                var now = new Date();
+                var nowTime = now.getTime();
+                ms = targetTime - nowTime;
+                var time = getResultTimg(ms);
+                var timeReult = time.days + "天" + time.hours + "小时" + time.minutes + "分钟" + time.seconds + "秒";
+                h1.innerHTML = timeReult;
+            }
+            setInterval(getTimeNow,1000);
+            function getResultTimg(ms){
+                var days = Math.floor(ms/(24*60*60*1000));
+                var ms1 = ms%(24*60*60*1000);
+                var hours = Math.floor(ms1/(60*60*1000));
+                var ms2 = ms%(60*60*1000);
+                var minutes = Math.floor(ms2/(60*1000));
+                var ms3 = ms%(60*1000);
+                var seconds = Math.floor(ms3/(1000));
+                return{
+                    days:days,
+                    hours:hours,
+                    minutes:minutes,
+                    seconds:seconds
+                }
+            }
+        </script>
+
+
+    <!-- 第四题 -->
+    <!-- <script>        
+        function fun(){
+            var num = Math.floor(Math.random()*7+1);
+            // var s = num;
+            return num;
+        };
+        console.log(fun());
+    </script> -->
+
+
+        <!-- 第五题 -->
+    <input type="text">
+    <span></span><button>验证</button>
+    <script>
+        var input = document.querySelector("input");
+        var span = document.querySelector("span");
+        var btn = document.querySelector("button");
+        var reg = /^[a-zA-Z0-9\-]{5,12}\@[a-zA-Z0-9]{2,5}\.com$/;
+        input.onblur = function(){
+            btn.onclick = function (){
+                if(reg.test(this.value)){
+                span.innerHTML = "验证通过";
+
+            }else{
+                span.innerHTML = "验证失败";    
+            }
+            }
+            
+        }
+    </script>
+
+
+    <!-- 第六题 -->
+    <!-- <script>
+        var arr = [5,10,6,11,18,22,11,31,6,52,19];
+        arr.sort();
+        for(var i =0;i<arr.length;i++){
+            if(arr[i]==arr[i+1]){
+                arr.splice(i,1);
+            }
+        }
+        console.log(arr)
+    </script> -->
+
+
+    <!-- 第七题 -->
+    <!-- <script>
+        var arr = ["This","is","JavaScript","and","jQuery"];
+        var str =arr.join("");
+        console.log(str);
+    </script> -->
+
+
+    <!-- 第八题 -->
+    <!-- <script>
+        var str = "This is JavaScript and jQuery"
+        var arr = [];
+        arr.push(str);
+        console.log(arr);
+    </script> -->
+
+
+    <!-- 第九题 -->
+    <!-- <p><span id="rm"></span></p>
+    <button>抽取幸运玩家</button>
+    <script>
+        var xywj = ["得秃","大庆","郑浩然","王皓","张润哲"]
+        var rm = document.querySelector("#rm")
+        var btn = document.querySelector("button")
+        btn.onclick = function(){
+            var num = xywj.length;
+            var sj = Math.floor(Math.random()*num);
+            // var sj = Math.random();
+            // var sub = Math.floor(sj*num);
+            rm.innerHTML=xywj[sj]
+        }
+    </script> -->
+    <!-- <h1></h1>
+    <button>开始</button>
+    <script>
+        var arr = ["张","王","李","赵"];
+        var h1 = document.querySelector("h1");
+        var btn = document.querySelector("button");
+        btn.onclick = function(){
+            var result = Math.floor(Math.random()*arr.length);
+            h1.innerHTML = arr[result];
+        }
+        
+    </script> -->
+
+    <!-- 第十题 -->
+     <!-- <script>
+    //     var arr = [5,50,6,11,18,62,31,52,19];       
+    //     for(var i = 0;i<arr.length-1;i++){
+    //         for(var j=0;j<arr.length-1-i;j++){
+    //             if(arr[j]>arr[j+1]){
+    //                 var s = arr[j];
+    //                 arr[j] = arr[j+1];
+    //                 arr[j+1] = s;
+    //             }
+    //         }
+    //     }
+    //     console.log(arr)
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        var h1 = document.querySelector("h1");
+        var target = new Date("2019-6-6").getTime();
+        var ms;
+        function getTime(){
+            var now = new Date().getTime();
+            ms = target - now;
+            var time = getTimeList(ms);
+            var result = "距离2019-6-6还有" + time.day+ "天"+time.hours+"小时"+time.minutes+"分钟"+time.seconds+"秒";
+            h1.innerHTML = result;
+        }
+        setInterval(getTime,1000);
+        function getTimeList(ms){
+            var day = Math.floor(ms/(24*60*60*1000));
+            var ms1 = ms%(24*60*60*1000);
+            var hours = Math.floor(ms1/(60*60*1000));
+            var ms2 = ms1%(60*60*1000);
+            var minutes = Math.floor(ms2/(60*1000));
+            var ms3 = ms2%(60*1000);
+            var seconds = Math.floor(ms3/(1000));
+            return{
+                day:day,
+                hours:hours,
+                minutes:minutes,
+                seconds:seconds,
+            }
+        }
+    </script>
+</body>
+</html>

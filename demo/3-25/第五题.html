@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script src="vue.js"></script>
+    <!-- <div id="app">
+        <span>距离2019-6-6还有{{day}}天 </span>
+        <span>{{hours}}小时 </span>
+        <span>{{imnutes}}分钟 </span>
+        <span>{{seconds}}秒 </span>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                day:"",
+                hours:"",
+                imnutes:"",
+                seconds:"",
+            },
+            created(){
+                let target = new Date("2019-6-6").getTime();
+                setInterval(() => {
+                    let now = new Date().getTime();
+                    let dfe = target - now;
+                    let allseconds = Math.floor(dfe/1000);
+                    let allimnutes = Math.floor(allseconds/60);
+                    let seconds = allseconds%60;
+                    let allhours = Math.floor(allimnutes/60);
+                    let imnutes = allimnutes%60;
+                    let day = Math.floor(allhours/24);
+                    let hours = allhours%24;
+                    this.day = day;
+                    this.hours = hours;
+                    this.imnutes = imnutes;
+                    this.seconds = seconds;
+                })
+            }
+        })
+    </script> -->
+
+    <div id="app">
+        <span>距离2019-6-6还有{{day}}天 </span>
+        <span>{{hours}}小时 </span>
+        <span>{{imnutes}}分钟 </span>
+        <span>{{seconds}}秒 </span>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                day:"",
+                hours:"",
+                imnutes:"",
+                seconds:"",
+            },
+            created(){
+                let target = new Date("2019-6-6").getTime();
+                setInterval(() => {
+                    let now = new Date().getTime();
+                    let dfe = target - now;
+                    let allseconds = Math.floor(dfe/1000);
+                    let allimnutes = Math.floor(allseconds/60);
+                    let seconds = allseconds % 60;
+                    let allhours = Math.floor(allimnutes/60);
+                    let imnutes = allimnutes % 60;
+                    let day = Math.floor(allhours/24);
+                    let hours = allhours % 24;
+                    this.day = day;
+                    this.hours = hours;
+                    this.imnutes = imnutes;
+                    this.seconds = seconds;
+
+                })
+            }
+        })
+    </script>
+</body>
+</html>

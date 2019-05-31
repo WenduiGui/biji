@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <span></span><button>验证</button>
+    <script>
+        var input = document.querySelector("input");
+        var span = document.querySelector("span");
+        var btn = document.querySelector("button")
+        var reg =/^[0-9A-Za-z][\.-_0-9A-Za-z]*@[0-9A-Za-z]+(\.[0-9A-Za-z]+)+$/
+        input.onblur =  function(){
+            btn.onclick = function(){
+                if(reg.test(text.value)){
+                    span.innerHTML = "验证成功";
+                }else{
+                    span.innerHTML = "验证失败";
+                }
+               
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>学生名字</h1><button>点名</button>
+    <script>
+        var h1 = document.querySelector("h1");
+        var btn = document.querySelector("button");
+        var arr = ["张","王","李","赵"];
+        btn.onclick = function(){
+            var result = Math.floor(Math.random()*arr.length)
+            h1.innerHTML = arr[result];
+        }
+    </script>
+</body>
+</html>

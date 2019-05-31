@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="changeImg">切换图片</button>
+        <div>
+            <img v-bind:src="imgSrc">
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        //通过v-bind可以将data中的数据绑定到html元素属性上
+        //data属性是数据可以指定Vue实例的数据并将其绑定到html，
+        //v-for指令，可以绑定数组的数据来渲染一个项目列表，v-for后面的值需要有in，in的后面是一个集合类型的数据，in前面的是集合中的每一个元素
+        //v-model指令，他能轻松实现表单输入和应用之间的双向绑定
+        //v-on：click是可以为元素绑定点击事件，可以简写成@click=""
+        var app = new Vue({
+            el:"#app",
+            data:{
+                imgSrc:"sucai/11.jpg"
+            },
+            methods:{
+                changeImg:function(){
+                    this.imgSrc="sucai/12.jpg"
+                    // 在methods中的changeImg方法内，
+                    // 我们可以使用this获取到vue实例，
+                    // 这样就可以进一步获取到vue实例的data，
+                    // 然后通过赋值的方式修改data的内容。
+                    // 这样就可以实现数据的变更，数据内容变更后，页面也会随之改变。
+                }
+            }
+        })
+        // 通过上面的例子，我们可以很直观地观察到vue与jQuery的差异，
+        // 在实现一个页面效果的时候，jQuery更倾向于操作DOM，
+        // 而vue主要是通过操作数据来实现页面的变化
+    </script>
+
+    <div id="app1">
+        <ul>
+            <li v-for="(val,index) in furits">
+                <p>水果名字是{{val}} </p>
+                <p>水果序号是 {{index}}</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var app1 = new Vue({
+            el:"#app1",
+            data:{
+                furits:["香蕉","苹果","鸭梨"]
+            }
+        })
+    </script>
+
+    <div id="app2">
+        <ul>
+            <li
+                @click="showIndex(index)"
+                v-for="(val,index) in fruits">
+                    {{val}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var app2 = new Vue({
+            el:"#app2",
+            data:{
+                fruits:["香蕉","苹果","鸭梨"]
+            },
+            methods:{
+                showIndex:function(index){
+                console.log(index);
+            }
+            }
+        })
+    </script>
+
+    <div id="app3">
+        <ul>
+            <li v-for="(val,index) in fruits">
+                {{val}}
+                <span @click="del(index)">删除</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var app3 = new Vue({
+            el:"#app3",
+            data:{
+                fruits:["香蕉","苹果","鸭梨"]
+            },
+            methods:{
+                del:function(index){
+                    this.fruits.splice(index,1)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

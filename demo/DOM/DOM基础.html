@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>你好</h1>
+    <script>
+    
+    var h1 = document.querySelector("h1");
+    h1.style.color ="red";  
+    </script> -->
+
+    <!-- <ul>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>鸭梨</li>
+    </ul>
+    <script>
+    
+    var ali = document.querySelectorAll("li");
+    for(var i =0;i<ali.length;i++){
+        ali[i].style.color = "red";
+    }
+
+
+    </script> -->
+
+    <!-- <button>按钮</button>
+    <script>
+    
+    var btn = document.querySelector("button");
+    btn.onclick = function(){
+        console.log("nihao ")
+    }
+    </script> -->
+
+
+
+
+<!-- 
+    <input type="text">
+    <button>输出</button>
+    <script>
+    
+    var input = document.querySelector("input");
+            var btn = document.querySelector("button");
+            btn.onclick = function(){
+             var text = input.value;
+             console.log(text);
+    }
+    </script> -->
+
+
+
+    <!-- <img src="sucai/11.jpg" alt="">
+    <button>切换图片</button>
+    <script>
+    
+    var img = document.querySelector("img");
+    var btn = document.querySelector("button");
+    btn.onclick = function(){
+        img.src = "sucai/12.jpg";
+    }
+    </script> -->
+
+
+    <input type="text" id="num1">
+    <input type="text" id="sign">
+    <input type="text" id="num2">
+    <input type="text" id="result">
+    <button>计算</button>
+    <script>
+    
+    var num1 = document.querySelector("#num1");
+    var sign = document.querySelector("#sign");
+    var num2 = document.querySelector("#num2");
+    var result = document.querySelector("#result");
+    var btn = document.querySelector("button");
+    btn.onclick = function(){
+        var n = Number(num1.value);
+        var m = Number(num2.value);
+        var r = count(n,sign.value,m);
+        result.value = r;
+    };
+    function count(n,s,m){
+        switch(s){
+            case "+": return n+m;break;
+            case "-": return n+-m;break;
+            case "*": return n*m;break;
+            case "/": return n/m;break;
+            default: alert("错误");
+        }
+    };
+    </script>
+</body>
+</html>

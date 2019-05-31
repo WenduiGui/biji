@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script src="vue.js"></script>
+    <div id="app">
+        <h1>数据绑定：{{message}}</h1>
+        <input type="text" v-model="message">
+    </div>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                message:""
+            }
+        })
+    </script>
+
+
+
+
+
+    <div id="app1">
+        <input v-model="newFruit" type="text">
+        <button @click="insert">添加</button>
+        <ul>
+            <li v-for="fruit in fruits">{{fruit}} </li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el:"#app1",
+            data:{
+                fruits:["香蕉","苹果","鸭梨"],
+                newFruit:""
+            },
+            methods:{
+                insert:function(){
+                    this.fruits.push(this.newFruit)
+                }
+            }
+        })
+    </script>
+
+    
+
+
+
+
+    <!-- <div id="app2">
+        <form v-on:submit.prevent="insert" action="">
+            <input v-model="newFruit" type="text">
+            <input type="submit" value="添加">
+        </form>
+        <ul>
+            <li v-for="(val,index) in fruits">
+                {{val}}
+                <span @click="del(index)">删除</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#app2",
+            data:{
+                fruits:["香蕉","苹果","鸭梨"]
+            },
+            methods:{
+                del:function(index){
+                    this.fruits.splice(index,1);
+                },
+                insert:function(){
+                    this.fruits.push(this.newFruit);
+                }
+            }
+        })
+    </script> -->
+    
+    <div id="app3">
+        <input v-model="newFruit" type="text">
+        <button v-on:click="insert">添加</button>
+        <ul>
+        <li v-for="(val,index) in fruits">
+            {{val}}
+            <span @click="del(index)">删除</span>
+        </li>
+    </div>
+    <script>
+    new Vue({
+        el:"#app3",
+        data:{
+            fruits:["香蕉","苹果","鸭梨"]
+        },
+        methods:{
+            del:function(index){
+                this.fruits.splice(index,1);
+            },
+            insert:function(){
+                this.fruits.push(this.newFruit);
+            }
+        }
+    })
+    </script>
+   
+</body>
+</html>

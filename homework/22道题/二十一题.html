@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{xsName}}</h1>
+        <button @click="getName">点名</button>
+    </div>
+    <script src="../3-25/vue.js"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                xsName:"学生点名",
+                name:["艾仕","路霸","瑞破","天使"],
+            },
+            methods:{
+                getName(){
+                    this.xsName = this.name[this.getRandom()]
+                },
+                getRandom(){
+                    return Math.floor(Math.random()*this.name.length)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

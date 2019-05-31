@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script src="jquery.js"></script>
+    <img src="img/11.jpg" alt="">
+    <script>
+        //click点击事件
+        $("img").click(function(){
+            $(this).attr("src","12.jpg")
+        });
+    </script>
+
+    <ul>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>鸭梨</li>
+    </ul>
+    <script>
+        var arr = ["11.jpg","12.jpg","13.jpg"]
+        $("li").click(function(){
+            var i = $(this).index();
+            //index可以获取索引值
+            var url = arr[i];
+            $('img').attr("src",url);
+        })
+    </script>
+</body>
+</html>

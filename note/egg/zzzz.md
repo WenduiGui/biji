@@ -67,3 +67,9 @@ ctx是context的缩写中文一般叫成上下文，这个在所有语言里都�
 所以第二个问题：
 body是http协议中的响应体，header是指响应头
 ctx.body = ctx.res.body = ctx.response.body
+
+
+### Request对象
+
+Request对象的作用是与客户端交互，收集客户端的Form、Cookies、超链接，或者收集服务器端的环境变量。
+request对象是从客户端向服务器发出请求，包括用户提交的信息以及客户端的一些信息。客户端可通过HTML表单或在网页地址后面提供参数的方法提交数据，然后服务器通过request对象的相关方法来获取这些数据。request的各种方法主要用来处理客户端浏览器提交的请求中的各项参数和选项。

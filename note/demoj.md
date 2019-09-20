@@ -1,6 +1,9 @@
 ### 创建vue项目
 vue init webpack project-name(项目名称)
 
+### 启动vue项目
+npm run serve
+
 ### 在Vue中使用axios
 安装依赖
 npm install --save axios

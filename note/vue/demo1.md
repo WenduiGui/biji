@@ -1,11 +1,11 @@
 # vue基础
 
 <div id="app">
-        <button @click="changeImg">切换图片</button>
-        <div>
-            <img v-bind:src="imgSrc">
-        </div>
+    <button @click="changeImg">切换图片</button>
+    <div>
+        <img v-bind:src="imgSrc">
     </div>
+</div>
     <script src="vue.js"></script>
     <script>
         通过v-bind可以将data中的数据绑定到html元素属性上

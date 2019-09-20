@@ -17,8 +17,25 @@
             }
             return res;
         }
-        var result = count(10);
-        console.log(result);
+        var num1 = Number(prompt('请输入数字'));
+        if(num1 == /^[0-9]*$/ ){ 
+            } else {
+                alert('请输入数字')
+            }
+        var sign = prompt('请输入一个操作符');
+        var num2 = Number(prompt('请输入数字'));
+        var result;
+
+        function count(n,s,m){
+            switch(s){
+                case "+": return n+m; break;
+                case "-": return n-m; break;
+                case "*": return n*m; break;
+                case "/": return n/m; break;
+            }
+        }
+        result = count(num1,sign,num2);
+        alert(result);
     </script>
 </body>
 </html>

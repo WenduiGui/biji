@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/css/meun.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content %} {% endblock %}
+    <div class="meunlist">
+        <ul>
+            {% for item in itemlist %}
+            <li>
+                <a class="a" href="{{item.id}}">
+                    <img class="pic" src="{{item.url}}" alt="">
+                    <span class="word">{{item.word}}</span>
+                </a>
+            </li>
+            {% endfor %}
+            <!-- <li><img src="" alt=""><a href="1"><span>首页</span></a></li>
+            <li><img src="" alt=""><a href="2"><span>精选</span></a></li>
+            <li><img src="" alt=""><a href="3"><span>专栏</span></a></li>
+            <li><img src="" alt=""><a href="4"><span>我的</span></a></li> -->
+        </ul>
+    </div>
+    {% block js %} {% endblock %}
+    <script src="../public/js/fontsizeset.js"></script>
+</body>
+
+</html>

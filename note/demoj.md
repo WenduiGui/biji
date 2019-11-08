@@ -9,6 +9,7 @@ npm run serve
 npm install --save axios
 
 ### 在Vue中使用element-u
+
 安装依赖
 npm i element-ui -S
 
@@ -77,3 +78,16 @@ config.cors = {
 ### Nunjucks渲染
 
 npm i egg-view-nunjucks --save   ------如果用Nunjucks渲染那么就下载对应插件
+
+
+  在plugin.js文件里配置
+  nunjucks: {
+    enable: true,
+    package: 'egg-view-nunjucks',
+}
+
+在config.default.js文件里配置
+
+  config.view = {
+    defaultViewEngine: 'nunjucks'
+  }

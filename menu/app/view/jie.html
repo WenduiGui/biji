@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/css/jie.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../public/img/back.png" alt="">
+        <span><a href="">
+                <span>《</span> 第一章:学习手册概述</a> </span>
+    </div>
+    <div class="content col-sm-10">
+        <h1>马了顶大</h1>
+        <span>asfasfa67tirrtdgn bqtf</span>
+    </div>
+    <div class="fe">
+        <div class="nav col-sm-2 hidden-xs pos_nav">
+            <p>前端开发电子书</p>
+            <ul>
+                <li><a href="/jie">第一节</a></li>
+                <li><a href="/jie">第二节</a></li>
+                <li><a href="/jie">第三节</a></li>
+            </ul>
+            <p>共二篇</p>
+        </div>
+        <div class="footer">
+            <button class="btn btn-default show visible-xs-block">
+                目录
+            </button>
+            <img src="../public/img/tab_alarm.png" alt="">
+            <img src="../public/img/tab_alarm.png" alt="">
+        </div>
+    </div>
+    <script src="../public/js/fontsizeset.js"></script>
+    <script src="../public/js/jquery.js"></script>
+    <script>
+        //点击显示隐藏目录
+        $(".fe .show").click(function (e) {
+            if ($(".fe .nav").hasClass("hidden-xs")) {
+                $(".fe .nav").removeClass("hidden-xs")
+            } else {
+                $(".fe .nav").addClass("hidden-xs")
+            }
+            e.stopPropagation();
+        })
+
+        //点击内容隐藏目录
+        $(".content").click(function () {
+            $(".fe .nav").addClass("hidden-xs")
+        })
+    </script>
+</body>
+
+</html>

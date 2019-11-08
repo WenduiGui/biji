@@ -1,0 +1,102 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 6.4rem;
+    height: 1.5rem;
+    border: 1px solid red;
+    display: flex;
+    flex-direction:column;
+}
+.header .logo{
+    width: 6.4rem;
+    height: 0.6rem;
+    border: 1px solid red;
+
+}
+.header .logo p{
+    font-size: 20px;
+    margin-left: 0.2rem;
+}
+.header .query{
+    width: 6.4rem;
+    height: 0.9rem;
+    border: 1px solid green;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.header .query input{
+    width: 5.8rem;
+    height: 0.4rem;
+    border-radius:30px;
+    border:1px solid red;
+}
+.content{
+    width: 6.4rem;
+    height: 9.2rem;
+    border: 1px solid red;
+    font-size: 16px;
+}
+.data {
+    width: 6.4rem;
+    height: 7.5rem;
+    border: 1px solid red;
+    display: flex;
+    overflow: scroll;
+    /* align-items:center; */
+}
+.data ul{
+    display: flex;
+    /* justify-content:center; */
+    align-items:flex-start;
+    flex-direction:column;
+}
+.data ul li{
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    /* padding-bottom: 0.2rem; */
+    border-bottom: 1px solid red;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    
+}
+.data .box{
+    margin-left: 0.3rem;
+    width: 2rem;
+    height: 1rem;
+    display: flex;
+    flex-wrap:wrap;
+    margin-right: 1.7rem;
+}
+.data .pic{
+    width: 17%;
+    height: 1.3rem;
+    margin-left: 0.3rem;
+}
+.data a{
+    color: black;
+    text-decoration: none;
+}
+.link {
+    width:  6.4rem;
+    height: 1.6rem;
+    border: 1px solid red;
+    font-size: 16px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.link ul{
+    display: flex;
+    margin-bottom: 0.1rem;
+    margin-top: 0.7rem;
+}
+.link ul a{
+    color: black;
+    text-decoration: none;
+}

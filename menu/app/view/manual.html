@@ -1,0 +1,40 @@
+{% extends "meun.html" %} {% block content %}
+<link rel="stylesheet" href="../public/css/manual.css">
+<div class="header">
+    <div class="logo">
+        <p>{{logo}}</p>
+    </div>
+    <div class="query">
+        <input type="text" placeholder="搜索" style="text-align: center;">
+    </div>
+</div>
+<div class="content">
+    <div class="data">
+        <ul>
+            {% for item in booklist %}
+            <li>
+                <img class="pic" src="{{item.url}}" alt="">
+                <div class="box">
+                    <span class="bookname">{{item.name}}</span>
+                    <span class="bookoutline">{{item.outline}}</span>
+                </div>
+                <a href="/details"><span class="enter">{{item.enter}}</span></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- <ul>
+        {% for item in itemlist %}
+        <li></li>
+        {% endfor %}
+    </ul> -->
+    <div class="link">
+        <ul>
+            <li><a href="">{{xiaozhou}}</a></li>
+            <li>|</li>
+            <li><a href="">{{team}}</a></li>
+        </ul>
+        <span>11111111111111111111</span>
+    </div>
+</div>
+{% endblock %}

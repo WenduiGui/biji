@@ -1,0 +1,62 @@
+{% extends "meun.html" %} {% block content %}
+<link rel="stylesheet" href="../public/css/header.css">
+<div class="header">
+    <div class="logo">
+        <p>{{logo}}</p>
+    </div>
+    <div class="query">
+        <input type="text" placeholder="搜索" style="text-align: center;">
+    </div>
+</div>
+<div class="banner"></div>
+<div class="content">
+    <div class="data">
+        <h2>精选文章</h2>
+        <ul>
+            {% for item in booklist %}
+            <li>
+                <img class="pic" src="{{item.url}}" alt="">
+                <div class="box">
+                    <span class="bookname">{{item.name}}</span>
+                    <span class="bookoutline">{{item.outline}}</span>
+                </div>
+                <a href="/details"><span class="enter">{{item.enter}}</span></a>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/details">
+        </a>
+    </div>
+    <div class="link">
+        <ul>
+            <li><a href="">{{xiaozhou}}</a></li>
+            <li>|</li>
+            <li><a href="">{{team}}</a></li>
+        </ul>
+        <span>11111111111111111111</span>
+    </div>
+</div>
+
+</div>
+
+{% block js %} {% endblock %}
+
+<script src="../public/js/jquery.js"></script>
+<script src="../public/js/fontsizeset.js"></script>
+<script>
+    $("h1").css("color", "#87CEFA");
+
+    var urlstr = location.href;
+    //alert((urlstr + '/').indexOf($(this).attr('href')));
+    var urlstatus = false;
+    $("a .word").each(function () {
+        if ((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+            $(this).addClass('cur'); urlstatus = true;
+        } else {
+            $(this).removeClass('cur');
+        }
+    });
+    if (!urlstatus) { $("#menu a").eq(0).addClass('cur'); }
+
+</script>
+{% endblock %}
